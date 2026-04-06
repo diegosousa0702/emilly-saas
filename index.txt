@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emilly Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff0f5;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    .item {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .btn {
+      background: #e91e63;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #d81b60;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 30%;
+      text-align: center;
+    }
+
+    .box span {
+      display: block;
+      font-size: 20px;
+      color: #e91e63;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Emilly - Dashboard</h1>
+
+  <div class="top">
+    <div class="box">Hoje<span id="compromissos">3</span></div>
+    <div class="box">Tarefas<span id="tarefas">5</span></div>
+    <div class="box">Recebido<span id="financeiro">R$ 800</span></div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Agenda</h2>
+      <div class="item">10:00 - Cliente João</div>
+      <div class="item">14:00 - Audiência</div>
+      <button class="btn">Adicionar</button>
+    </div>
+
+    <div class="card">
+      <h2>Tarefas</h2>
+      <div class="item">Ligar para cliente</div>
+      <div class="item">Enviar documento</div>
+      <button class="btn">Nova tarefa</button>
+    </div>
+
+    <div class="card">
+      <h2>Clientes do dia</h2>
+      <div class="item">João - 10:00</div>
+      <div class="item">Maria - 15:00</div>
+    </div>
+
+    <div class="card">
+      <h2>Alertas</h2>
+      <div class="item">Prazo vencendo</div>
+      <div class="item">Pagamento pendente</di
