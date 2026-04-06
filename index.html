@@ -1,274 +1,171 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Emilly Testa — Gerador de Contratos</title>
 
-<html class="dark" lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Masterclass Geladinho Gourmet | Renda Extra</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "surface-container-lowest": "#0e0e0e",
-                        "on-primary": "#68000a",
-                        "inverse-surface": "#e5e2e1",
-                        "surface-container-high": "#2a2a2a",
-                        "surface-container": "#20201f",
-                        "surface-container-highest": "#353535",
-                        "on-error": "#690005",
-                        "secondary-fixed-dim": "#ffb3ad",
-                        "surface-bright": "#393939",
-                        "on-tertiary": "#003736",
-                        "on-tertiary-container": "#00302e",
-                        "tertiary-fixed-dim": "#69d8d4",
-                        "surface-dim": "#131313",
-                        "on-tertiary-fixed": "#00201f",
-                        "on-primary-fixed": "#410004",
-                        "on-secondary-fixed-variant": "#802826",
-                        "primary-fixed": "#ffdad7",
-                        "surface-variant": "#353535",
-                        "secondary-fixed": "#ffdad7",
-                        "surface-container-low": "#1c1b1b",
-                        "on-primary-fixed-variant": "#930013",
-                        "primary-fixed-dim": "#ffb3ad",
-                        "primary": "#ffb3ad",
-                        "on-secondary-container": "#ff9992",
-                        "tertiary-fixed": "#87f4f0",
-                        "on-background": "#e5e2e1",
-                        "surface": "#131313",
-                        "on-secondary-fixed": "#410004",
-                        "on-error-container": "#ffdad6",
-                        "on-tertiary-fixed-variant": "#00504e",
-                        "background": "#131313",
-                        "inverse-primary": "#b91a24",
-                        "on-primary-container": "#5c0008",
-                        "secondary-container": "#802826",
-                        "secondary": "#ffb3ad",
-                        "inverse-on-surface": "#313030",
-                        "on-surface": "#e5e2e1",
-                        "tertiary-container": "#24a09d",
-                        "outline-variant": "#5b403e",
-                        "error-container": "#93000a",
-                        "on-secondary": "#611112",
-                        "primary-container": "#ff5451",
-                        "on-surface-variant": "#e4beba",
-                        "tertiary": "#69d8d4",
-                        "outline": "#ab8986",
-                        "surface-tint": "#ffb3ad",
-                        "error": "#ffb4ab"
-                    },
-                    fontFamily: {
-                        "headline": ["Inter"],
-                        "body": ["Manrope"],
-                        "label": ["Inter"]
-                    },
-                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-                },
-            },
-        }
-    </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            background-color: #131313;
-            color: #e5e2e1;
-            overflow-x: hidden;
-        }
-        .editorial-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-        }
-        .blood-gradient {
-            background: linear-gradient(135deg, #ffb3ad 0%, #ff5451 100%);
-        }
-        .smoked-glass {
-            background: rgba(42, 42, 42, 0.6);
-            backdrop-filter: blur(20px);
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="font-body">
-<!-- Top Navigation Anchor -->
-<header class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl shadow-[0_0_40px_rgba(255,255,255,0.06)]">
-<div class="flex justify-between items-center px-8 py-4 max-w-full">
-<div class="text-xl font-black tracking-tighter text-white uppercase">MASTERCLASS</div>
-<div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-white/70 cursor-pointer hover:text-[#EF4444] transition-colors duration-500">menu</span>
-<a class="font-['Inter'] uppercase tracking-[0.1em] text-sm font-bold text-[#EF4444] hidden md:block" href="https://wa.me/5598984468178">ENROLL NOW</a>
-</div>
-</div>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffe6f0;
+    color: #333;
+  }
+
+  header {
+    background: #ff66a3;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+
+  h3 {
+    margin-top: 20px;
+    color: #ff3399;
+  }
+
+  select, input, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+
+  textarea {
+    min-height: 80px;
+  }
+
+  button {
+    background: #ff3399;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  button:hover {
+    background: #e60073;
+  }
+
+  #resultado {
+    white-space: pre-wrap;
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ffb3d9;
+    background: #fff5fa;
+    border-radius: 8px;
+  }
+
+  footer {
+    text-align: center;
+    margin: 40px 0 10px;
+    font-size: 12px;
+    color: #777;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  Emilly Testa — Gerador de Contratos Jurídicos
 </header>
-<main class="pt-24">
-<!-- Hero Section -->
-<section class="px-6 py-16 md:py-32 max-w-7xl mx-auto overflow-hidden">
-<div class="mb-4">
-<span class="font-label text-xs uppercase tracking-[0.3em] text-[#EF4444] font-bold">OPORTUNIDADE ÚNICA</span>
+
+<div class="container">
+
+  <h3>Área do Direito</h3>
+  <select id="area">
+    <option>Direito de Família</option>
+    <option>Direito Trabalhista</option>
+    <option>Direito Civil</option>
+  </select>
+
+  <h3>Informações das Partes</h3>
+  <input id="contratante" placeholder="Nome do contratante" />
+  <input id="doc1" placeholder="CPF/CNPJ do contratante" />
+  <input id="parte2" placeholder="Nome da outra parte" />
+  <input id="doc2" placeholder="CPF/CNPJ da outra parte" />
+  <input id="endereco" placeholder="Endereço das partes" />
+
+  <h3>Detalhes do Acordo</h3>
+  <textarea id="descricao" placeholder="Descreva a situação/acordo"></textarea>
+  <input id="valor" placeholder="Valor envolvido (se houver)" />
+  <input id="data" type="date" />
+
+  <button onclick="gerarContrato()">Gerar Contrato</button>
+
+  <div id="resultado"></div>
 </div>
-<h1 class="font-headline text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 text-white max-w-4xl">
-                Você pode começar a ganhar dinheiro ainda essa semana vendendo geladinho gourmet
-            </h1>
-<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
-                Mesmo começando do zero e sem experiência. Transforme sua cozinha em uma fonte de renda extraordinária.
-            </p>
-</section>
-<!-- Video Section -->
-<section class="bg-surface-container-low py-20 px-4">
-<div class="max-w-5xl mx-auto">
-<div class="relative aspect-video rounded-lg overflow-hidden shadow-[0_0_60px_rgba(239,68,68,0.15)] ring-1 ring-white/10">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0" src="https://www.youtube.com/embed/27Fa30Ovpnk" title="YouTube video player">
-</iframe>
-</div>
-<div class="mt-12 text-center">
-<p class="font-label text-sm uppercase tracking-widest text-on-surface-variant/60">ASSISTA AO VÍDEO COMPLETO PARA LIBERAR O ACESSO</p>
-</div>
-</div>
-</section>
-<!-- Redline Urgency -->
-<section class="bg-[#EF4444] py-8 overflow-hidden">
-<div class="whitespace-nowrap flex animate-marquee">
-<div class="flex items-center gap-8 px-4">
-<p class="text-white font-headline font-extrabold uppercase tracking-tighter text-lg md:text-2xl flex items-center gap-4">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">warning</span>
-                        ATENÇÃO: Esse método simples já está ajudando pessoas comuns a gerar renda — você pode ser o próximo
-                    </p>
-<p class="text-white font-headline font-extrabold uppercase tracking-tighter text-lg md:text-2xl flex items-center gap-4">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">warning</span>
-                        ATENÇÃO: Esse método simples já está ajudando pessoas comuns a gerar renda — você pode ser o próximo
-                    </p>
-</div>
-</div>
-</section>
-<!-- Benefits Section (Editorial Spotlight) -->
-<section class="py-24 px-6 max-w-7xl mx-auto">
-<div class="mb-20">
-<h2 class="font-headline text-4xl md:text-6xl font-bold tracking-tighter text-white">O QUE VOCÊ VAI APRENDER</h2>
-<div class="h-1 w-20 bg-[#EF4444] mt-4"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<!-- Benefit Card 1 -->
-<div class="group">
-<div class="aspect-square mb-8 overflow-hidden rounded-lg">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close-up of artisan gourmet popsicles with chocolate drizzle and sprinkles on a dark moody background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3SsDdB4JeQbxVoEIPxkYltknzdih4tZxqyEbCa8UFiECKSNi5OEYqcE8WDMcHsBkno1En8wKnSojhIWMVnTA49cTXH8eGvERNXkPWiF48T26P4ZTMsogse8DvYcr80tX87Xv4f7hEC6qfxRomJHBD18RnSyOANxa_HtQN1uwykFLoDrU95k2zHKy1mT13PhA5p7VOdf2V_orv0HxoaSBAktxXTlNMgNc93jf0OlynAQ5-y-LsnGBNR2GmPGiySCRKIgvTfeCwtOM"/>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-4 text-white">Receitas lucrativas e fáceis</h3>
-<p class="text-on-surface-variant leading-relaxed">Métodos passo a passo para criar sabores irresistíveis que vendem sozinhos pela aparência e sabor único.</p>
-</div>
-<!-- Benefit Card 2 -->
-<div class="group">
-<div class="aspect-square mb-8 overflow-hidden rounded-lg">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="happy female entrepreneur handing over a gourmet product to a customer in a bright minimalist setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvU27GhV0g8odfBTH2MKhtc8Sowk5XX04j5dBGkodWahwog4DxfDLNJAOoXEZ6xW3Y1r7Lg170l0o9pink1_jnxRt29bWvsYnTQEUTJYH0lpmoP5cvs3-OdaUzWmMlvv1iXpUjPYERYVRDJba0vpCkyJmT7k31J_9G054yuTBPQEPYPaVyP_Qj4eb71QTKUyPEJn2Tjh7tDmloJp1OXread61H0cEP14Si8WjQ0gheOCJSj-tGjE7t3nDx1qQZzRIkaV9ibnWd81w"/>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-4 text-white">Como vender todos no mesmo dia</h3>
-<p class="text-on-surface-variant leading-relaxed">Estratégias de vendas validadas para esgotar seu estoque em poucas horas, usando apenas o seu celular.</p>
-</div>
-<!-- Benefit Card 3 -->
-<div class="group">
-<div class="aspect-square mb-8 overflow-hidden rounded-lg">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="overhead view of professional kitchen tools and minimal ingredients on a dark slate surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQzynHlrmK3u1Aq-AXm2lYzW9Y29oBL1nL48-7ad3PuyleOXBBjwok6sBAEdYvSujZxNJpWStKG3UTqT8VwSxOQJ58GFgL7oR2y4ZDsfSGdUBbGYxX2P1dM5-XK91ElnKyNVsEJudMdZwlWYzMeJMj90oYo5YwXVk1lmmhjrv4-44g1ex05wm1wWeTXB7Pgu6tTxeGKlVtPXtVr-IWh8BJKWKk0htgMB1MgDxO-XhACHBSXjCJbL9x2ZuxPsBylKQaJ09eup846OI"/>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-4 text-white">Como começar sem dinheiro</h3>
-<p class="text-on-surface-variant leading-relaxed">O guia definitivo para iniciar seu negócio com o que você já tem em casa e reinvestir seus primeiros lucros.</p>
-</div>
-</div>
-</section>
-<!-- Social Proof (Testimonials) -->
-<section class="bg-surface-container-lowest py-24 px-6 border-y border-[#EF4444]/10">
-<div class="max-w-7xl mx-auto">
-<h2 class="font-headline text-3xl font-bold tracking-tighter text-white mb-16 text-center italic">"RESULTADOS REAIS DE QUEM COMEÇOU DO ZERO"</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Testimonial 1 -->
-<div class="smoked-glass p-10 rounded-xl relative">
-<span class="material-symbols-outlined absolute -top-4 -left-2 text-6xl text-[#EF4444]/20">format_quote</span>
-<p class="text-xl text-white mb-8 relative z-10 font-medium">"No primeiro dia já consegui vender tudo. A demanda é surreal quando você aplica o método certo."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="professional portrait of a smiling woman against a dark grey studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiofA4ATRofzXLvE7RX6l4CbpCRg4NNwBGf-728tqLo2_9-7GNH2vqeGOpwVLePy9m9-jtvU0Fp4s0jMwD1s65aZBZVtcuF6pr2kVXXdNVw92XKktaA2iIiztHljwzCpZ6PU_OxqQVfaoYgy93iiNmCbazzKJPb4jQDtmHxxN83Ly5TAQQK_-8ipIQ_iQrgRCG_1-3w6OMHEEdSLHBcD2JIGhn_cMff-jNNCtbOAUuVbL4RSicU1gmgX9zRzA68NzhYD-iP6Uov3Q"/>
-</div>
-<div>
-<p class="text-white font-bold">Ana Silva</p>
-<p class="text-xs text-[#EF4444] uppercase tracking-widest">Aluna Premium</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="smoked-glass p-10 rounded-xl relative">
-<span class="material-symbols-outlined absolute -top-4 -left-2 text-6xl text-[#EF4444]/20">format_quote</span>
-<p class="text-xl text-white mb-8 relative z-10 font-medium">"Comecei com pouco dinheiro e já tive retorno na primeira semana. Hoje o geladinho é minha renda principal."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="portrait of a confident young man in a clean casual outfit with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFTWC6nXlHj7iqlkptcGePu6jk5jQ6fhqgnDjNdGRad6YvbqD9b6pZ87OCoFFy_0UWrU7PxtsJDaxidkREhS-IYDiBmq6aN2t8Y2Nxqwd8F6IsV2TUPwpjt9QgHVkXqM-Jum8IQQadnh4mKCZi3Dr2qc0YSEUzjBqZgQrfZ6xdcPg8XwdSjEQT7To11HjkE6ZU0UFZELtSP0W1t2uW9FPAJE8OTlcIyHC_Cbnf0Fm8VOns2NTdplHkTwnJMbtdonb6KjWoGkdxdTo"/>
-</div>
-<div>
-<p class="text-white font-bold">Carlos Mendes</p>
-<p class="text-xs text-[#EF4444] uppercase tracking-widest">Aluno Premium</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="smoked-glass p-10 rounded-xl relative">
-<span class="material-symbols-outlined absolute -top-4 -left-2 text-6xl text-[#EF4444]/20">format_quote</span>
-<p class="text-xl text-white mb-8 relative z-10 font-medium">"Hoje já tenho renda extra toda semana. Consigo conciliar com meus filhos e trabalhar de casa."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="close-up portrait of a woman with a warm expression and minimalist jewelry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMmP6hA8Wl5wuciVH5nuabLo2G6tN4cIwXmzDzm4aENFWE0i0lTf_gLLAdUcnbNC_leQNxZ6bPVZVbSOMlYkjyf8INPWzj-1iGxv7F1SDNcoyqv8G9JAF6LvtVkMFFJeW6Qvnu9-_NKpIt7xxnVb7tzUsAekRXxTFIk4bzkHuPr4o3x84XUrCIOQfMsN2qDpi9rLlwBBvcQfF9uJsBPQO9ru1YN93RFjnL-4NuegJi49t7dkOlNtJb5iY1hlKLc01X51_cnd5eKxo"/>
-</div>
-<div>
-<p class="text-white font-bold">Juliana Torres</p>
-<p class="text-xs text-[#EF4444] uppercase tracking-widest">Aluna Premium</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Warranty Section -->
-<section class="py-24 px-6 max-w-4xl mx-auto text-center">
-<div class="mb-12">
-<span class="material-symbols-outlined text-8xl text-[#EF4444]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-</div>
-<h2 class="font-headline text-4xl font-black text-white mb-6 uppercase tracking-tighter">Garantia Blindada de 7 dias</h2>
-<p class="text-2xl text-on-surface-variant leading-relaxed">
-                Se você não gostar do conteúdo, devolvemos seu dinheiro. <span class="text-white font-bold">Sem risco nenhum.</span> Nossa confiança é total no seu resultado.
-            </p>
-</section>
-<!-- Final CTA Section -->
-<section class="py-32 px-6 bg-gradient-to-t from-surface-container-lowest to-surface">
-<div class="max-w-4xl mx-auto text-center">
-<h2 class="font-headline text-4xl md:text-6xl font-black text-white mb-12 tracking-tighter leading-tight">PRONTA PARA MUDAR SUA REALIDADE FINANCEIRA?</h2>
-<a class="inline-block w-full md:w-auto bg-[#EF4444] text-white font-headline font-black text-2xl md:text-4xl px-12 py-8 rounded-lg shadow-[0_20px_50px_rgba(239,68,68,0.3)] hover:scale-105 transition-transform duration-500 ease-in-out uppercase tracking-tighter" href="https://wa.me/5598984468178">
-                    Clica aqui para garantir sua vaga
-                </a>
-<p class="mt-8 text-on-surface-variant/60 font-label text-sm uppercase tracking-widest flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-sm">lock</span> 
-                    Inscrição Segura &amp; Imediata
-                </p>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-[#0E0E0E] w-full py-12 px-8 border-t border-[#EF4444]/10">
-<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
-<div class="text-lg font-bold text-white uppercase tracking-tighter">MASTERCLASS GOURMET</div>
-<div class="flex gap-8">
-<a class="font-['Manrope'] text-xs tracking-widest uppercase text-white/40 hover:text-[#EF4444] transition-all duration-500" href="#">PRIVACY</a>
-<a class="font-['Manrope'] text-xs tracking-widest uppercase text-white/40 hover:text-[#EF4444] transition-all duration-500" href="#">TERMS</a>
-<a class="font-['Manrope'] text-xs tracking-widest uppercase text-white/40 hover:text-[#EF4444] transition-all duration-500" href="#">SUPPORT</a>
-</div>
-<div class="font-['Manrope'] text-xs tracking-widest uppercase text-white/40">
-                © 2024 CINEMATIC EDITORIAL. ALL RIGHTS RESERVED.
-            </div>
-</div>
+
+<footer>
+  Modelo base. Revisar antes de utilizar juridicamente.
 </footer>
-</body></html>
+
+<script>
+function coletarDados() {
+  return {
+    area: document.getElementById("area").value,
+    contratante: document.getElementById("contratante").value,
+    doc1: document.getElementById("doc1").value,
+    parte2: document.getElementById("parte2").value,
+    doc2: document.getElementById("doc2").value,
+    endereco: document.getElementById("endereco").value,
+    descricao: document.getElementById("descricao").value,
+    valor: document.getElementById("valor").value,
+    data: document.getElementById("data").value,
+  };
+}
+
+function montarTextoContrato(d) {
+  return `
+CONTRATO JURÍDICO — ${d.area}
+
+CONTRATANTE: ${d.contratante}
+Documento: ${d.doc1}
+
+PARTE CONTRÁRIA: ${d.parte2}
+Documento: ${d.doc2}
+
+Endereço informado: ${d.endereco}
+
+DESCRIÇÃO DO ACORDO:
+${d.descricao}
+
+Valor envolvido: ${d.valor || "Não informado"}
+Data do acordo: ${d.data}
+
+As partes firmam o presente acordo, podendo ajustá-lo conforme as
+necessidades específicas do caso.
+
+_______________
+Assinatura do Contratante
+
+_______________
+Assinatura da Outra Parte
+`;
+}
+
+function gerarContrato() {
+  const dados = coletarDados();
+  const contrato = montarTextoContrato(dados);
+  document.getElementById("resultado").innerText = contrato;
+}
+</script>
+
+</body>
+</html>
